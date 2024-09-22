@@ -19,12 +19,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.1'
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
       - name: Cache Gradle packages
         uses: actions/cache@v4
         with:
@@ -32,13 +26,4 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: gradle build jacocoAggregatedReport sonar --info
-      - name: Login to Docker Hub
-        run: docker login -u a002k -p ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build and tag the Docker image
-        run: |
-          docker build -t a002k/simple-app:latest .
-      - name: Push the Docker image
-        run: docker push a002k/simple-app --all-tags
+        run: gradle build
