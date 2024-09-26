@@ -24,7 +24,7 @@ tasks.spotbugsMain {
 
 sonar {
     properties {
-        property 'sonar.projectKey', 'ak-git_SimpleApp'
+        property 'sonar.projectKey', 'ak-git_Micronaut'
         property 'sonar.organization', 'ak-git'
         property 'sonar.host.url', 'https://sonarcloud.io'
         property 'sonar.branch.name', 'master'
@@ -34,7 +34,7 @@ sonar {
 
 allprojects {
     group = 'com.ak'
-    version = '2024.08.30'
+    version = '2024.09.26'
     apply plugin: 'idea'
     apply plugin: 'jacoco'
     apply plugin: 'org.barfuin.gradle.jacocolog'
