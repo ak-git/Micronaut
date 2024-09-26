@@ -19,6 +19,12 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
       - name: Cache Gradle packages
         uses: actions/cache@v4
         with:
@@ -26,4 +32,6 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
-        run: gradle build
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: gradle build jacocoAggregatedReport sonar --info
