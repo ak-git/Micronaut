@@ -1,15 +1,18 @@
 package com.ak.micronaut;
 
+import io.micronaut.context.ApplicationContext;
 import io.micronaut.runtime.EmbeddedApplication;
-import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
-import jakarta.inject.Inject;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-@MicronautTest
 class MntTest {
-  @Inject
-  EmbeddedApplication<?> application;
+  private static final EmbeddedApplication<?> application = ApplicationContext.run(EmbeddedApplication.class);
+
+  @AfterAll
+  static void tearDown() {
+    application.stop();
+  }
 
   @Test
   void testItWorks() {

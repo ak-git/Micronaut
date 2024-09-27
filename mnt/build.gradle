@@ -1,7 +1,8 @@
 plugins {
+    alias(libs.plugins.javamodularity.moduleplugin)
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id 'io.micronaut.minimal.application' version '4.4.2'
-    id 'io.micronaut.library' version '4.4.2'
+    id 'io.micronaut.minimal.library' version '4.4.2'
     id 'io.micronaut.docker' version '4.4.2'
     id("io.micronaut.aot") version "4.4.2"
 }
@@ -13,9 +14,15 @@ dependencies {
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("io.micronaut.serde:micronaut-serde-jackson")
     runtimeOnly("ch.qos.logback:logback-classic")
+
+    testImplementation(platform(libs.junit))
+    testImplementation libs.bundles.test.implementation
+    testCompileOnly libs.bundles.test.compile
+    testRuntimeOnly libs.bundles.test.runtime
 }
 
 application {
+    mainModule = 'com.ak.micronaut'
     mainClass = "com.ak.micronaut.Application"
 }
 

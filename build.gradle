@@ -68,3 +68,12 @@ subprojects {
         options.encoding = 'UTF-8'
     }
 }
+
+test {
+    forkEvery = 5
+    useJUnitPlatform()
+    testLogging {
+        events 'failed'
+    }
+    maxHeapSize = '1G'
+}
