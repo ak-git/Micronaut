@@ -6,16 +6,16 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MntTest {
-  private static final EmbeddedApplication<?> application = ApplicationContext.run(EmbeddedApplication.class);
+class ApplicationTest {
+  private static final EmbeddedApplication<?> APPLICATION = ApplicationContext.run(EmbeddedApplication.class);
 
   @AfterAll
   static void tearDown() {
-    application.stop();
+    APPLICATION.stop();
   }
 
   @Test
   void testItWorks() {
-    Assertions.assertTrue(application.isRunning());
+    Assertions.assertTrue(APPLICATION.isRunning());
   }
 }

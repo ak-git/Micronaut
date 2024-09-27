@@ -11,7 +11,6 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.serde/micronaut-serde-processor/2.11.0/80b47e60ad518244c9ad39186ab2823c8b63c3da/micronaut-serde-processor-2.11.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut.serde/micronaut-serde-api/2.11.0/da7f0a4239bfd2155f5f9ed11f1d3e97e05821e9/micronaut-serde-api-2.11.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-graal/4.6.5/a3bbcc29195f8a63276bfb8854c86076e0502105/micronaut-graal-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-http-validation/4.6.5/80d6e66b636004551691dab8ecf88e2e4671ae78/micronaut-http-validation-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/4.6.5/37288b68bd57a16f6d9817553ad7c6f68a42f3e/micronaut-inject-java-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-core-processor/4.6.5/10319d9a5b06331dc2af2b3a21e1d875bc675c9c/micronaut-core-processor-4.6.5.jar" />
@@ -48,7 +47,6 @@
         <option name="micronaut.processing.incremental" value="true" />
         <option name="micronaut.processing.module" value="mnt" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-graal/4.6.5/a3bbcc29195f8a63276bfb8854c86076e0502105/micronaut-graal-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/4.6.5/37288b68bd57a16f6d9817553ad7c6f68a42f3e/micronaut-inject-java-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-core-processor/4.6.5/10319d9a5b06331dc2af2b3a21e1d875bc675c9c/micronaut-core-processor-4.6.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-aop/4.6.5/264e758a5bc57b3658ac86cea9973541c80ce076/micronaut-aop-4.6.5.jar" />
