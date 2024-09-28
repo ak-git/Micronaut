@@ -20,5 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = 'Micronaut'
-include 'hello'
 include 'mnt'

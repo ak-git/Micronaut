@@ -8,19 +8,20 @@ plugins {
 }
 
 dependencies {
-    implementation libs.jspecify
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    implementation libs.jspecify
+    implementation("org.yaml:snakeyaml")
+    implementation("ch.qos.logback:logback-classic")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("io.micronaut.serde:micronaut-serde-jackson")
     runtimeOnly("ch.qos.logback:logback-classic")
-    implementation("org.yaml:snakeyaml")
 
     testImplementation(platform(libs.junit))
     testImplementation libs.bundles.test.implementation
+    testImplementation libs.bundles.test.mockito
     testCompileOnly libs.bundles.test.compile
     testRuntimeOnly libs.bundles.test.runtime
-    testRuntimeOnly("ch.qos.logback:logback-classic")
 }
 
 application {

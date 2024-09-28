@@ -9,6 +9,7 @@ nebula-lint = '20.0.0'
 jspecify = '1.0.0'
 junit = '5.11.1'
 assertj = '3.26.3'
+mockito = '5.14.0'
 
 micronaut = '4.6.2'
 
@@ -29,8 +30,11 @@ junit-jupiter-api = { module = 'org.junit.jupiter:junit-jupiter-api' }
 junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine' }
 junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher' }
 assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
 
 [bundles]
 test-implementation = ['junit-jupiter-api', 'assertj']
 test-compile = ['junit-jupiter', 'junit-jupiter-engine']
 test-runtime = ['junit-jupiter-engine', 'junit-platform-launcher']
+test-mockito = ['mockito-core', 'mockito-junit']
