@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.javamodularity.moduleplugin)
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id 'io.micronaut.minimal.application' version '4.4.3'
-    id 'io.micronaut.minimal.library' version '4.4.2'
+    id 'io.micronaut.minimal.library' version '4.4.3'
     id 'io.micronaut.docker' version '4.4.3'
     id("io.micronaut.aot") version "4.4.3"
 }
