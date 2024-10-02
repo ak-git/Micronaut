@@ -1,18 +1,18 @@
 plugins {
     alias(libs.plugins.javamodularity.moduleplugin)
-    id("com.github.johnrengelman.shadow") version "8.1.1"
-    id 'io.micronaut.minimal.application' version '4.4.3'
-    id 'io.micronaut.minimal.library' version '4.4.3'
-    id 'io.micronaut.docker' version '4.4.3'
-    id("io.micronaut.aot") version "4.4.3"
+    alias(libs.plugins.johnrengelman.shadow)
+    alias(libs.plugins.micronaut.application)
+    alias(libs.plugins.micronaut.library)
+    alias(libs.plugins.micronaut.docker)
+    alias(libs.plugins.micronaut.aot)
 }
 
 dependencies {
     implementation libs.jspecify
-    implementation("org.yaml:snakeyaml")
-    compileOnly("io.micronaut:micronaut-http-client")
-    runtimeOnly("io.micronaut.serde:micronaut-serde-jackson")
-    runtimeOnly("ch.qos.logback:logback-classic")
+    implementation 'org.yaml:snakeyaml'
+    compileOnly 'io.micronaut:micronaut-http-client'
+    runtimeOnly 'io.micronaut.serde:micronaut-serde-jackson'
+    runtimeOnly 'ch.qos.logback:logback-classic'
 
     testImplementation(platform(libs.junit))
     testImplementation libs.bundles.test.implementation
@@ -22,16 +22,16 @@ dependencies {
 
 application {
     mainModule = 'com.ak.micronaut'
-    mainClass = "com.ak.micronaut.Application"
+    mainClass = 'com.ak.micronaut.Application'
 }
 
 micronaut {
     importMicronautPlatform = true
-    runtime("netty")
-    testRuntime("junit5")
+    runtime('netty')
+    testRuntime('junit5')
     processing {
         incremental(true)
-        annotations("com.ak.micronaut.*")
+        annotations('com.ak.micronaut.*')
     }
     aot {
         // Please review carefully the optimizations enabled below

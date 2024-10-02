@@ -10,6 +10,9 @@ jspecify = '1.0.0'
 junit = '5.11.1'
 assertj = '3.26.3'
 
+johnrengelman-shadow = '8.1.1'
+io-micronaut = '4.4.3'
+
 [plugins]
 javamodularity-moduleplugin = { id = 'org.javamodularity.moduleplugin', version.ref = 'javamodularity-moduleplugin' }
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
@@ -17,6 +20,12 @@ jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 ben-manes-versions = { id = 'com.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 nebula-lint = { id = 'nebula.lint', version.ref = 'nebula-lint' }
+
+johnrengelman-shadow = { id = 'com.github.johnrengelman.shadow', version.ref = 'johnrengelman-shadow' }
+micronaut-application = { id = 'io.micronaut.minimal.application', version.ref = 'io-micronaut' }
+micronaut-library = { id = 'io.micronaut.minimal.library', version.ref = 'io-micronaut' }
+micronaut-docker = { id = 'io.micronaut.docker', version.ref = 'io-micronaut' }
+micronaut-aot = { id = 'io.micronaut.aot', version.ref = 'io-micronaut' }
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
