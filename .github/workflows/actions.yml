@@ -50,7 +50,7 @@ jobs:
       - name: Build and tag the Docker image
         working-directory: ./mnt
         run: |
-          docker optimizedDockerfile
+          gradle optimizedDockerfile
           docker build -f build/docker/optimized/Dockerfile -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
       - name: Push the Docker image
         run: docker push $DOCKER_USER/$DOCKER_IMAGE --all-tags
