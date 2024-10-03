@@ -40,7 +40,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: gradle build optimizedDockerfile jacocoAggregatedReport sonar --info
+        run: gradle build dockerfile jacocoAggregatedReport sonar --info
       - name: Compute version
         run: |
           gradle version
@@ -49,6 +49,6 @@ jobs:
         run: docker login -u $DOCKER_USER -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and tag the Docker image
         working-directory: ./mnt
-        run: docker build -f build/docker/optimized/Dockerfile -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
+        run: docker build -f build/docker/main/Dockerfile -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
       - name: Push the Docker image
         run: docker push $DOCKER_USER/$DOCKER_IMAGE --all-tags
