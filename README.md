@@ -40,7 +40,9 @@ git tag 2024.11.1
 ./gradlew buildHealth
 ```
 
+[![Github Action Badge](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ak-git_Micronaut&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ak-git_Micronaut)
+
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_Micronaut&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_Micronaut)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_Micronaut&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_Micronaut)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ak-git_Micronaut&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ak-git_Micronaut)

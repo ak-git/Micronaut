@@ -38,3 +38,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: gradle build jacocoAggregatedReport sonar --info
+      - name: Compute version
+        run: |
+          echo "BUILD_VERSION=$(gradle version | grep Version | awk '{ print $2 }')" >> $GITHUB_ENV
+          echo "$BUILD_VERSION"
