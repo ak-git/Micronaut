@@ -5,6 +5,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+env:
+  DOCKER_USER: a002k
+  DOCKER_IMAGE: micronaut
 
 jobs:
   build:
@@ -39,4 +42,15 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: gradle build jacocoAggregatedReport sonar --info
       - name: Compute version
-        run: echo "BUILD_VERSION=$(gradle version | grep Version | awk '{ print $2 }')" >> $GITHUB_ENV
+        run: |
+          gradle version
+          echo "BUILD_VERSION=$(gradle version | grep Version | awk '{ print $2 }')" >> $GITHUB_ENV
+      - name: Login to Docker Hub
+        run: docker login -u $DOCKER_USER -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and tag the Docker image
+        working-directory: ./mnt
+        run: |
+          docker optimizedDockerfile
+          docker build -f build/docker/optimized/Dockerfile -t $DOCKER_USER/$DOCKER_IMAGE:${{ env.BUILD_VERSION }} -t $DOCKER_USER/$DOCKER_IMAGE:latest .
+      - name: Push the Docker image
+        run: docker push $DOCKER_USER/$DOCKER_IMAGE --all-tags
