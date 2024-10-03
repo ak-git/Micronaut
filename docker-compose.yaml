@@ -1,0 +1,4 @@
+services:
+  micronaut:
+    container_name: micronaut
+    image: a002k/micronaut:latest
