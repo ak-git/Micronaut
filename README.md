@@ -58,10 +58,10 @@ or via docker-compose
 docker compose run -d --name micronaut --rm micronaut
 ```
 
-and show logs
+and follow ```-f``` logs
 
 ```shell
-docker logs micronaut
+docker logs -f micronaut
 ```
 
 to stop
@@ -76,10 +76,10 @@ docker stop micronaut
 docker compose up -d
 ```
 
-and show logs
+and follow ```-f``` logs
 
 ```shell
-docker compose logs micronaut
+docker compose logs -f micronaut
 ```
 
 to stop
