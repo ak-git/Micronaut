@@ -46,13 +46,31 @@ git tag 2024.11.1
 docker run --rm a002k/micronaut
 ```
 
-## Run docker image as docker-compose
+or in detach ```-d``` mode
 
 ```shell
-docker compose run --rm micronaut
+docker run -d --name micronaut --rm a002k/micronaut
 ```
 
-or
+or via docker-compose
+
+```shell
+docker compose run -d --name micronaut --rm micronaut
+```
+
+and show logs
+
+```shell
+docker logs micronaut
+```
+
+to stop
+
+```shell
+docker stop micronaut
+```
+
+## Run docker image as docker-compose
 
 ```shell
 docker compose up -d
@@ -61,7 +79,13 @@ docker compose up -d
 and show logs
 
 ```shell
-docker compose logs
+docker compose logs micronaut
+```
+
+to stop
+
+```shell
+docker compose down
 ```
 
 [![Github Action Badge](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)
