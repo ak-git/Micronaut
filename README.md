@@ -6,8 +6,6 @@
 ./gradlew run -t --args="-micronaut.application.name=Micronaut"
 ```
 
-# docker run -i --rm -e APP_NAME=Micronaut2 a002k/micronaut:latest
-
 ## [Semantic versioning](https://zoltanaltfatter.com/2020/04/10/semantic-versioning-with-jgitver/)
 
 ### Plugin [fr.brouillard.oss.gradle.jgitver](https://github.com/jgitver/gradle-jgitver-plugin)
