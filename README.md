@@ -3,8 +3,10 @@
 ## Run using Gradle
 
 ```shell
-./gradlew run -t
+./gradlew run -t --args="-micronaut.application.name=Micronaut"
 ```
+
+# docker run -i --rm -e APP_NAME=Micronaut2 a002k/micronaut:latest
 
 ## [Semantic versioning](https://zoltanaltfatter.com/2020/04/10/semantic-versioning-with-jgitver/)
 
@@ -43,14 +45,18 @@ git tag 2024.11.1
 ## Run docker image
 
 ```shell
-docker run --rm a002k/micronaut
+docker run -i --rm -e APP_NAME=Micronaut --env-file ./.env a002k/micronaut
 ```
-
-or in detach ```-d``` mode
 
 ```shell
 docker run -d --name micronaut --rm a002k/micronaut
 ```
+
+- ```-i``` Keep STDIN open even if not attached
+- ```--rm``` Remove container after stop
+- ```-e``` [Set environment variables](https://docs.docker.com/reference/cli/docker/container/run/#env)
+- ```--env-file``` set file name with environment variables
+- ```-d``` Detach mode, Run container in background and print container ID
 
 or via docker-compose
 
