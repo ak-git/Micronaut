@@ -2,6 +2,8 @@ services:
   micronaut:
     container_name: micronaut
     image: a002k/micronaut:latest
+    environment:
+      - APP_NAME=${APP_NAME:-Micronaut}
     networks:
       - bridge-net
 

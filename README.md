@@ -79,7 +79,7 @@ docker stop micronaut
 ## Run docker image as docker-compose
 
 ```shell
-docker compose up -d
+APP_NAME=Micronaut docker compose up -d
 ```
 
 and follow ```-f``` logs
@@ -92,6 +92,20 @@ to stop
 
 ```shell
 docker compose down
+```
+
+## Run with environment variables
+
+Check config 
+
+```shell
+docker compose config
+```
+
+Use ```./.env``` file or overwrite as
+
+```shell
+APP_NAME=Micronaut docker compose up -d
 ```
 
 [![Github Action Badge](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)](https://github.com/ak-git/Micronaut/actions/workflows/actions.yml/badge.svg)
