@@ -43,7 +43,7 @@ git tag 2024.11.1
 ## Run docker image
 
 ```shell
-docker run -i --rm -e APP_NAME=Micronaut --env-file ./.env a002k/micronaut
+docker run -i --rm a002k/micronaut
 ```
 
 ```shell
@@ -52,15 +52,9 @@ docker run -d --name micronaut --rm a002k/micronaut
 
 - ```-i``` Keep STDIN open even if not attached
 - ```--rm``` Remove container after stop
-- ```-e``` [Set environment variables](https://docs.docker.com/reference/cli/docker/container/run/#env)
-- ```--env-file``` set file name with environment variables
+- ```-e APP_NAME=Micronaut``` [Set environment variables](https://docs.docker.com/reference/cli/docker/container/run/#env)
+- ```--env-file ./.env``` set file name with environment variables
 - ```-d``` Detach mode, Run container in background and print container ID
-
-or via docker-compose
-
-```shell
-docker compose run -d --name micronaut --rm micronaut
-```
 
 and follow ```-f``` logs
 
@@ -77,7 +71,7 @@ docker stop micronaut
 ## Run docker image as docker-compose
 
 ```shell
-APP_NAME=Micronaut docker compose up -d
+docker compose run -d --name micronaut --rm micronaut
 ```
 
 and follow ```-f``` logs
