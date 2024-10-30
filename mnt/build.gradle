@@ -1,5 +1,4 @@
 plugins {
-    id 'java-library'
     alias(libs.plugins.javamodularity.moduleplugin)
     alias(libs.plugins.johnrengelman.shadow)
     alias(libs.plugins.micronaut.application)
