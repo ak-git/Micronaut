@@ -12,7 +12,7 @@ junit = '5.11.3'
 assertj = '3.26.3'
 
 johnrengelman-shadow = '8.1.1'
-io-micronaut = '4.4.3'
+io-micronaut = '4.4.4'
 
 [plugins]
 javamodularity-moduleplugin = { id = 'org.javamodularity.moduleplugin', version.ref = 'javamodularity-moduleplugin' }
