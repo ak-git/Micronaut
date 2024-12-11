@@ -1,5 +1,4 @@
 [versions]
-javamodularity-moduleplugin = '1.8.15'
 sonarqube = '6.0.1.5171'
 jacocolog = '3.1.0'
 spotbugs = '6.0.26'
@@ -14,8 +13,9 @@ assertj = '3.26.3'
 johnrengelman-shadow = '8.1.1'
 io-micronaut = '4.4.4'
 
+apiguardian-api = '1.1.2'
+
 [plugins]
-javamodularity-moduleplugin = { id = 'org.javamodularity.moduleplugin', version.ref = 'javamodularity-moduleplugin' }
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
 jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
@@ -31,6 +31,7 @@ micronaut-aot = { id = 'io.micronaut.aot', version.ref = 'io-micronaut' }
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
+slf4j-api = { module = 'org.slf4j:slf4j-api' }
 
 junit = { module = 'org.junit:junit-bom', version.ref = 'junit' }
 junit-jupiter = { module = 'org.junit.jupiter:junit-jupiter' }
@@ -39,7 +40,14 @@ junit-jupiter-engine = { module = 'org.junit.jupiter:junit-jupiter-engine' }
 junit-platform-launcher = { module = 'org.junit.platform:junit-platform-launcher' }
 assertj = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
 
+jakarta-inject-api = { module = 'jakarta.inject:jakarta.inject-api' }
+apiguardian-api = { module = 'org.apiguardian:apiguardian-api', version.ref = 'apiguardian-api' }
+micronaut-core = { module = 'io.micronaut:micronaut-core' }
+micronaut-test-core = { module = 'io.micronaut.test:micronaut-test-core' }
+junit-platform-commons = { module = 'org.junit.platform:junit-platform-commons' }
+
 [bundles]
 test-implementation = ['junit-jupiter-api', 'assertj']
 test-compile = ['junit-jupiter', 'junit-jupiter-engine']
 test-runtime = ['junit-jupiter-engine', 'junit-platform-launcher']
+test-micronaut-implementation = ['jakarta-inject-api', 'apiguardian-api', 'junit-platform-commons', 'micronaut-core', 'micronaut-test-core']

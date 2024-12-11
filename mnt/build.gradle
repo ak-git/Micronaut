@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    alias(libs.plugins.javamodularity.moduleplugin)
     alias(libs.plugins.johnrengelman.shadow)
     alias(libs.plugins.micronaut.application)
     alias(libs.plugins.micronaut.library)
@@ -10,13 +9,15 @@ plugins {
 
 dependencies {
     implementation libs.jspecify
-    implementation 'org.yaml:snakeyaml'
-    compileOnly 'io.micronaut:micronaut-http-client'
+    runtimeOnly 'org.yaml:snakeyaml'
     runtimeOnly 'io.micronaut.serde:micronaut-serde-jackson'
     runtimeOnly 'ch.qos.logback:logback-classic'
 
+    implementation libs.slf4j.api
+
     testImplementation(platform(libs.junit))
     testImplementation libs.bundles.test.implementation
+    testImplementation libs.bundles.test.micronaut.implementation
     testCompileOnly libs.bundles.test.compile
     testRuntimeOnly libs.bundles.test.runtime
 }
@@ -28,7 +29,6 @@ application {
 
 micronaut {
     importMicronautPlatform = true
-    runtime('netty')
     testRuntime('junit5')
     processing {
         incremental(true)
