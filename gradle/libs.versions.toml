@@ -11,7 +11,7 @@ junit = '5.11.4'
 assertj = '3.27.2'
 
 johnrengelman-shadow = '8.1.1'
-io-micronaut = '4.4.4'
+io-micronaut = '4.4.5'
 
 apiguardian-api = '1.1.2'
 
