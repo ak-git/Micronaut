@@ -13,7 +13,7 @@ public class Application {
   public static void main(String[] args) {
     try (ApplicationContext context = ApplicationContext.run(args)) {
       String appName = context.getEnvironment().get("micronaut.application.name", String.class).orElse("");
-      LOGGER.info("{} running = {}", appName, context.isRunning());
+      LOGGER.atInfo().setMessage(appName).addKeyValue("running", context::isRunning).log();
     }
   }
 }
