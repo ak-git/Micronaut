@@ -3,5 +3,5 @@ module com.ak.micronaut {
   requires org.slf4j;
   requires jakarta.inject;
   requires jakarta.annotation;
-  requires io.micronaut.inject;
+  requires io.micronaut.micronaut_inject;
 }
