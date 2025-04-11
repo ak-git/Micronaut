@@ -12,7 +12,7 @@ junit = '5.13.0-M2'
 assertj = '4.0.0-M1'
 
 johnrengelman-shadow = '8.1.1'
-io-micronaut = '4.5.1'
+io-micronaut = '4.5.2'
 
 apiguardian-api = '1.1.2'
 
