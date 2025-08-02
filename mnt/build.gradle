@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    alias(libs.plugins.javamodularity.moduleplugin)
     alias(libs.plugins.johnrengelman.shadow)
     alias(libs.plugins.micronaut.application)
     alias(libs.plugins.micronaut.library)
@@ -46,13 +45,5 @@ micronaut {
         deduceEnvironment = true
         optimizeNetty = true
         replaceLogbackXml = true
-    }
-}
-
-tasks {
-    test {
-        moduleOptions {
-            runOnClasspath = true
-        }
     }
 }
