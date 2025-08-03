@@ -9,7 +9,6 @@ jspecify = '1.0.0'
 junit = '6.0.0-M2'
 assertj = '4.0.0-M1'
 
-johnrengelman-shadow = '8.1.1'
 io-micronaut = '4.5.4'
 
 apiguardian-api = '1.1.2'
@@ -21,7 +20,6 @@ spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 ben-manes-versions = { id = 'com.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 jgitver = { id = 'fr.brouillard.oss.gradle.jgitver', version.ref = 'jgitver' }
 
-johnrengelman-shadow = { id = 'com.github.johnrengelman.shadow', version.ref = 'johnrengelman-shadow' }
 micronaut-application = { id = 'io.micronaut.minimal.application', version.ref = 'io-micronaut' }
 micronaut-library = { id = 'io.micronaut.minimal.library', version.ref = 'io-micronaut' }
 micronaut-docker = { id = 'io.micronaut.docker', version.ref = 'io-micronaut' }
