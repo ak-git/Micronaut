@@ -4,9 +4,14 @@ services:
     image: a002k/micronaut:latest
     environment:
       - APP_NAME=${APP_NAME:-Micronaut}
+    volumes:
+      - micronaut:/home/app/
     networks:
       - bridge-net
 
 networks:
   bridge-net:
     driver: bridge
+
+volumes:
+  micronaut:
