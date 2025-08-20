@@ -47,6 +47,6 @@ micronaut {
     }
 }
 
-tasks.named("optimizedDockerfile") {
+tasks.named("dockerfile") {
     baseImage = "eclipse-temurin:24-jre-alpine-3.22@sha256:9a4bd30f02e82e4987d56cc8ac5d7e9d13a2451c228c1f5d6978a317d18d1cd1"
 }
