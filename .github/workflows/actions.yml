@@ -42,7 +42,7 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: gradle build optimizedDockerfile jacocoAggregatedReport sonar --info
+        run: gradle build dockerfile jacocoAggregatedReport sonar --info
       - name: Compute version
         run: |
           gradle version
