@@ -23,7 +23,6 @@ jgitver = { id = 'fr.brouillard.oss.gradle.jgitver', version.ref = 'jgitver' }
 micronaut-application = { id = 'io.micronaut.minimal.application', version.ref = 'io-micronaut' }
 micronaut-library = { id = 'io.micronaut.minimal.library', version.ref = 'io-micronaut' }
 micronaut-docker = { id = 'io.micronaut.docker', version.ref = 'io-micronaut' }
-micronaut-aot = { id = 'io.micronaut.aot', version.ref = 'io-micronaut' }
 
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
