@@ -27,6 +27,8 @@ micronaut-docker = { id = 'io.micronaut.docker', version.ref = 'io-micronaut' }
 [libraries]
 jspecify = { module = 'org.jspecify:jspecify', version.ref = 'jspecify' }
 slf4j-api = { module = 'org.slf4j:slf4j-api' }
+snakeyaml = { module = 'org.yaml:snakeyaml' }
+logback = { module = 'ch.qos.logback:logback-classic' }
 
 junit = { module = 'org.junit:junit-bom', version.ref = 'junit' }
 junit-jupiter = { module = 'org.junit.jupiter:junit-jupiter' }

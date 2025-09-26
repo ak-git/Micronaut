@@ -7,8 +7,8 @@ plugins {
 
 dependencies {
     implementation libs.jspecify
-    runtimeOnly 'org.yaml:snakeyaml'
-    runtimeOnly 'ch.qos.logback:logback-classic'
+    runtimeOnly libs.snakeyaml
+    runtimeOnly libs.logback
 
     implementation libs.slf4j.api
 
