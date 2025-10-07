@@ -38,7 +38,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Micronaut.mnt" options="-parameters -Amicronaut.processing.incremental=true -Amicronaut.processing.annotations=com.ak.micronaut.* -Amicronaut.processing.group=com.ak -Amicronaut.processing.module=mnt" />
-      <module name="Micronaut.mnt.main" options="-parameters -parameters -Amicronaut.processing.incremental=true -Amicronaut.processing.annotations=com.ak.micronaut.* -Amicronaut.processing.group=com.ak -Amicronaut.processing.module=mnt" />
+      <module name="Micronaut.mnt.main" options="-parameters -Amicronaut.processing.incremental=true -Amicronaut.processing.annotations=com.ak.micronaut.* -Amicronaut.processing.group=com.ak -Amicronaut.processing.module=mnt" />
       <module name="Micronaut.mnt.test" options="-parameters -Amicronaut.processing.incremental=true -Amicronaut.processing.annotations=com.ak.micronaut.* -Amicronaut.processing.group=com.ak -Amicronaut.processing.module=mnt" />
     </option>
   </component>
