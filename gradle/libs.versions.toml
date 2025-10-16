@@ -9,7 +9,7 @@ jspecify = '1.0.0'
 junit = '6.0.0'
 assertj = '4.0.0-M1'
 
-io-micronaut = '4.5.5'
+io-micronaut = '4.6.0'
 
 apiguardian-api = '1.1.2'
 
