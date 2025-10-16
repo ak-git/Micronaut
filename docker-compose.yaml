@@ -5,7 +5,7 @@ services:
     environment:
       - APP_NAME=${APP_NAME:-Micronaut}
     volumes:
-      - micronaut:/home/app/
+      - micronaut:/home/app/data
     networks:
       - bridge-net
 
