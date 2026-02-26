@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-    implementation libs.jspecify
+    compileOnly libs.jspecify
     runtimeOnly libs.snakeyaml
     runtimeOnly libs.logback
 
@@ -15,6 +15,7 @@ dependencies {
     testImplementation(platform(libs.junit))
     testImplementation libs.bundles.test.implementation
     testImplementation libs.bundles.test.micronaut.implementation
+    testCompileOnly libs.jspecify
     testCompileOnly libs.bundles.test.compile
     testRuntimeOnly libs.bundles.test.runtime
 }
