@@ -35,5 +35,5 @@ micronaut {
 }
 
 tasks.named("dockerfile") {
-    baseImage = "eclipse-temurin:25-jre-ubi10-minimal@sha256:5e8fd2ea9aa1c86e723ad83ee7038245dd96c81a4a999260f92e8643043d3ed9"
+    baseImage = "eclipse-temurin:26-jre-ubi10-minimal@sha256:74a6f0bc32138b62787a5ae4e21eb0ab21810e6b36b4965620fb80de95224329"
 }
