@@ -6,7 +6,7 @@ ben-manes-versions = '0.54.0'
 git-semver = '0.19.2'
 
 jspecify = '1.0.0'
-junit = '6.1.0'
+junit = '6.1.1'
 assertj = '4.0.0-M1'
 
 io-micronaut = '5.0.1'
