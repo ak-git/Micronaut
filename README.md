@@ -8,16 +8,16 @@
 
 ## [Semantic versioning](https://zoltanaltfatter.com/2020/04/10/semantic-versioning-with-jgitver/)
 
-### Plugin [com.github.jmongard.git-semver-plugin](https://github.com/jmongard/Git.SemVersioning.Gradle)
+### Plugin [axion-release-plugin](https://github.com/allegro/axion-release-plugin)
 
 ```shell
-gradle printVersion
+gradle currentVersion -q -Prelease.quiet
 ```
 
 ### Update version
 
 ```shell
-gradle releaseVersion
+gradle release
 ```
 
 ### Add git tag
@@ -28,10 +28,10 @@ git tag 2026.04
 
 ## Update dependencies
 
-### Plugin [com.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
+### Plugin [io.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
 
 ```shell
-./gradlew dependencyUpdates --no-parallel
+gradle dependencyUpdates --no-parallel
 ```
 
 ## Check dependencies
@@ -39,7 +39,7 @@ git tag 2026.04
 ### Plugin [dependency-analysis-gradle-plugin](https://github.com/autonomousapps/dependency-analysis-gradle-plugin)
 
 ```shell
-./gradlew buildHealth
+gradle buildHealth
 ```
 
 ## Run docker image
