@@ -17,7 +17,7 @@ apiguardian-api = '1.1.2'
 sonarqube = { id = 'org.sonarqube', version.ref = 'sonarqube' }
 jacocolog = { id = 'org.barfuin.gradle.jacocolog', version.ref = 'jacocolog' }
 spotbugs = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
-ben-manes-versions = { id = 'com.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
+ben-manes-versions = { id = 'io.github.ben-manes.versions', version.ref = 'ben-manes-versions' }
 git-semver = { id = 'pl.allegro.tech.build.axion-release', version.ref = 'git-semver' }
 
 micronaut-application = { id = 'io.micronaut.minimal.application', version.ref = 'io-micronaut' }
