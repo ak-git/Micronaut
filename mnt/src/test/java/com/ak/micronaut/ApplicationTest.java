@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThatNoException;
 @MicronautTest(startApplication = false, transactional = false)
 class ApplicationTest {
   @Test
-  void testItWorks() {
+  void itWorks() {
     assertThatNoException().isThrownBy(() -> Application.main(new String[] {}));
   }
 }

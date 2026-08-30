@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.micronaut.application)
     alias(libs.plugins.micronaut.library)
     alias(libs.plugins.micronaut.docker)
+    alias(libs.plugins.openrewrite)
 }
 
 dependencies {
@@ -18,6 +19,8 @@ dependencies {
     testCompileOnly libs.jspecify
     testCompileOnly libs.bundles.test.compile
     testRuntimeOnly libs.bundles.test.runtime
+
+    rewrite libs.rewrite.testing.frameworks
 }
 
 application {
@@ -32,6 +35,14 @@ micronaut {
         incremental(true)
         annotations('com.ak.micronaut.*')
     }
+}
+
+rewrite {
+    activeRecipe('org.openrewrite.java.testing.assertj.JUnitToAssertj')
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
 }
 
 tasks.named("dockerfile") {

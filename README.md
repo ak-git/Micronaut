@@ -11,13 +11,13 @@
 ### Plugin [axion-release-plugin](https://github.com/allegro/axion-release-plugin)
 
 ```shell
-gradle currentVersion -q -Prelease.quiet
+./gradlew currentVersion -q -Prelease.quiet
 ```
 
 ### Update version
 
 ```shell
-gradle release
+./gradlew release
 ```
 
 ### Add git tag
@@ -31,7 +31,7 @@ git tag 2026.04
 ### Plugin [io.github.ben-manes.versions](https://github.com/ben-manes/gradle-versions-plugin)
 
 ```shell
-gradle dependencyUpdates --no-parallel
+./gradlew dependencyUpdates --no-parallel
 ```
 
 ## Check dependencies
@@ -39,7 +39,17 @@ gradle dependencyUpdates --no-parallel
 ### Plugin [dependency-analysis-gradle-plugin](https://github.com/autonomousapps/dependency-analysis-gradle-plugin)
 
 ```shell
-gradle buildHealth
+./gradlew buildHealth
+```
+
+## Rewrite
+
+### [Migrate JUnit asserts to AssertJ](https://docs.openrewrite.org/recipes/java/testing/assertj/junittoassertj)
+
+Get token https://artifacts.codegenomeproject.org/maven/
+
+```shell
+./gradlew rewriteRun
 ```
 
 ## Run docker image
